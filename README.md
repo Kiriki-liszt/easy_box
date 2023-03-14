@@ -4,7 +4,7 @@
 
 1. airwindows channel9 - fixed to neve.  
 2. Lowcut filter <- might not be used, and not implemented yet.  
-3. maag-liftikus eq, but I made it auto adjusted to sample rate.  
+3. maag-liftikus eq, but I made it auto adjusted to sample rate and added a 1.2 kHz peak filter for mid-focus control.  
 4. airwindows DeBess, fixed filter.  
 5. MeowMu compressor. Variation of airwindows VariMu comp.  
 6. airwindows gate, implemented but gui not made.  
