@@ -37,6 +37,9 @@
 			},
 			"rect_led": {
 				"path": "rect_led.png"
+			},
+			"slider.png": {
+				"path": "slider.png"
 			}
 		},
 		"fonts": {},
@@ -97,7 +100,7 @@
 				"SelectedRow": "27"
 			},
 			"UIBitmapsDataSource": {
-				"SelectedRow": "11"
+				"SelectedRow": "12"
 			},
 			"UIGradientsDataSource": {
 				"SelectedRow": "-1"
@@ -382,7 +385,7 @@
 							"bitmap": "ssl_red",
 							"class": "CAnimKnob",
 							"control-tag": "Comp",
-							"default-value": "0.1",
+							"default-value": "0.2",
 							"height-of-one-image": "75",
 							"inverse-bitmap": "false",
 							"max-value": "1",
@@ -638,6 +641,38 @@
 							"transparent": "false",
 							"wants-focus": "false",
 							"wheel-inc-value": "0.1"
+						}
+					},
+					"CSlider": {
+						"attributes": {
+							"bitmap-offset": "0, 0",
+							"class": "CSlider",
+							"control-tag": "Gate",
+							"default-value": "0",
+							"draw-back": "false",
+							"draw-back-color": "~ BlackCColor",
+							"draw-frame": "false",
+							"draw-frame-color": "~ GreyCColor",
+							"draw-value": "false",
+							"draw-value-color": "~ WhiteCColor",
+							"draw-value-from-center": "false",
+							"draw-value-inverted": "false",
+							"frame-width": "1",
+							"handle-bitmap": "slider.png",
+							"handle-offset": "0, 0",
+							"max-value": "1",
+							"min-value": "0",
+							"mode": "use global",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"orientation": "vertical",
+							"origin": "533, 32",
+							"reverse-orientation": "false",
+							"size": "60, 465",
+							"transparent": "true",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1",
+							"zoom-factor": "10"
 						}
 					}
 				}

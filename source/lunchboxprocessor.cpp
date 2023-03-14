@@ -190,6 +190,7 @@ namespace yg331 {
 				processDeBess<Vst::Sample32>((Vst::Sample32**)in, getSampleRate, data.numSamples);
 				processComp<Vst::Sample32>((Vst::Sample32**)in, getSampleRate, data.numSamples);
 				processInflator<Vst::Sample32>((Vst::Sample32**)in, getSampleRate, data.numSamples);
+				processGate<Vst::Sample32>((Vst::Sample32**)in, getSampleRate, data.numSamples);
 				processOutput<Vst::Sample32>((Vst::Sample32**)in, getSampleRate, data.numSamples, Vst::kSample32);
 				memcpy(out[0], in[0], sampleFramesSize);
 				memcpy(out[1], in[1], sampleFramesSize);
@@ -201,6 +202,7 @@ namespace yg331 {
 				processDeBess<Vst::Sample64>((Vst::Sample64**)in, getSampleRate, data.numSamples);
 				processComp<Vst::Sample64>((Vst::Sample64**)in, getSampleRate, data.numSamples);
 				processInflator<Vst::Sample64>((Vst::Sample64**)in, getSampleRate, data.numSamples);
+				processGate<Vst::Sample64>((Vst::Sample64**)in, getSampleRate, data.numSamples);
 				processOutput<Vst::Sample64>((Vst::Sample64**)in, getSampleRate, data.numSamples, Vst::kSample64);
 				memcpy(out[0], in[0], sampleFramesSize);
 				memcpy(out[1], in[1], sampleFramesSize);
@@ -909,24 +911,29 @@ namespace yg331 {
 	template <typename SampleType>
 	void lunchboxProcessor::processGate(SampleType** inputs, Vst::Sample64 getSampleRate, int32 sampleFrames)
 	{
-		float* in1 = inputs[0];
-		float* in2 = inputs[1];
+		SampleType* in1 = inputs[0];
+		SampleType* in2 = inputs[1];
 
-		double overallscale = 1.0;
+		Vst::Sample64 overallscale = 1.0;
 		overallscale /= 44100.0;
 
 		//begin Gate
-		double onthreshold = (pow(fParamGate, 3) / 3) + 0.00018;
-		double offthreshold = onthreshold * 1.1;
-		double release = 0.028331119964586;
-		double absmax = 220.9;
+		// double onthreshold = (pow(fParamGate, 3) / 3) + 0.00018;
+		Vst::Sample64 plainDB;
+		if (fParamGate > 0.5) plainDB = (2 * (0.0 + 18.0) * fParamGate) + (2 * -18.0);
+		else plainDB = (2 * (-18.0 - (-60.0)) * fParamGate) + (-60.0);
+		Vst::Sample64 onthreshold = exp(log(10.0) * plainDB / 20.0);
+
+		Vst::Sample64 offthreshold = onthreshold * 1.1;
+		Vst::Sample64 release = 0.028331119964586;
+		Vst::Sample64 absmax = 220.9;
 		//speed to be compensated w.r.t sample rate
 		//end Gate
 
 		while (--sampleFrames >= 0)
 		{
-			double inputSampleL = *in1;
-			double inputSampleR = *in2;
+			Vst::Sample64 inputSampleL = *in1;
+			Vst::Sample64 inputSampleR = *in2;
 
 			//begin Gate
 			if (inputSampleL > 0.0)

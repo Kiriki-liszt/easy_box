@@ -7,8 +7,8 @@
 3. maag-liftikus eq, but I made it auto adjusted to sample rate and added a 1.2 kHz peak filter for mid-focus control.  
 4. airwindows DeBess, fixed filter.  
 5. MeowMu compressor. Variation of airwindows VariMu comp.  
-6. airwindows gate, implemented but gui not made.  
-7. REAPER version of sonnos Inflator, with fixed curve.  
+6. airwindows gate.  
+7. REAPER version of sonnox Inflator, with fixed curve.  
 
 Still developing, but you can try it in build folder.  
 
@@ -24,3 +24,4 @@ VSTGUI 4.12 used
 
 v0.0.1 : initial.  
 v0.1.0 : gui update & loucut enabled.  
+v1.0.0 : gate enabled. full feature enabled.  
