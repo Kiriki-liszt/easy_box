@@ -11,7 +11,7 @@ project(airwindows_500_lunchbox
     # Version number symbols usable in C++ can be found in
     # source/version.h and ${PROJECT_BINARY_DIR}/projectversion.h.
     VERSION 1.0.0.0 
-    DESCRIPTION "airwindows_500_lunchbox VST 3 Plug-in"
+    DESCRIPTION "easybox 500-style VST 3 Plug-in"
 )
 
 set(SMTG_VSTGUI_ROOT "${vst3sdk_SOURCE_DIR}")

@@ -10,7 +10,7 @@
 #include "public.sdk/source/main/pluginfactory.h"
 #include "public.sdk/source/vst/vst2wrapper/vst2wrapper.h"
 
-#define stringPluginName "airwindows 500 lunchbox"
+#define stringPluginName "easybox500"
 
 using namespace Steinberg::Vst;
 using namespace yg331;
