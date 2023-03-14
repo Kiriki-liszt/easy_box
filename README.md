@@ -2,6 +2,8 @@
 
 500-style channel strip for vocal-podcasting.  
 
+<img src="screenshot.png"  width="200"/>
+
 1. airwindows channel9 - fixed to neve.  
 2. Lowcut filter.  
 3. maag-liftikus eq, but I made it auto adjusted to sample rate and added a 1.2 kHz peak filter for mid-focus control.  
