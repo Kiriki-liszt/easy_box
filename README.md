@@ -2,7 +2,7 @@
 
 500-style channel strip for vocal-podcasting.  
 
-<img src="screenshot.png"  width="200"/>
+<img src="screenshot.png"  width="400"/>
 
 1. airwindows channel9 - fixed to neve.  
 2. Lowcut filter.  
