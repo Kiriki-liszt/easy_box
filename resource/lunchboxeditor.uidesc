@@ -1,0 +1,647 @@
+{
+	"vstgui-ui-description": {
+		"version": "1",
+		"bitmaps": {
+			"background": {
+				"path": "background.png"
+			},
+			"meter_v_on.png": {
+				"path": "meter_v_on.png"
+			},
+			"meter_v_off.png": {
+				"path": "meter_v_off.png"
+			},
+			"meter_h_on.png": {
+				"path": "meter_h_on.png"
+			},
+			"meter_h_off.png": {
+				"path": "meter_h_off.png"
+			},
+			"ssl_green": {
+				"path": "ssl_green.png"
+			},
+			"ssl_blue": {
+				"path": "ssl_blue.png"
+			},
+			"ssl_red": {
+				"path": "ssl_red.png"
+			},
+			"ssl_violet": {
+				"path": "ssl_violet.png"
+			},
+			"ssl_gray": {
+				"path": "ssl_gray.png"
+			},
+			"ssl_black": {
+				"path": "ssl_black.png"
+			},
+			"rect_led": {
+				"path": "rect_led.png"
+			}
+		},
+		"fonts": {},
+		"colors": {},
+		"gradients": {},
+		"control-tags": {
+			"Bypass": "0",
+			"Input": "1",
+			"Output": "2",
+			"Drive": "3",
+			"Lowcut": "4",
+			"Air": "5",
+			"High": "6",
+			"Focus": "7",
+			"Body": "8",
+			"Low": "9",
+			"Intensity": "10",
+			"Sharpness": "11",
+			"Depth": "12",
+			"Listen": "13",
+			"Comp": "14",
+			"Speed": "15",
+			"Attack": "16",
+			"Gate": "17",
+			"Inflate": "18",
+			"Safe": "19",
+			"InVuPPM": "20",
+			"OutVuPPM": "21",
+			"DeEssVuPPM": "22",
+			"CompVuPPM": "23"
+		},
+		"custom": {
+			"FocusDrawing": {},
+			"VST3Editor": {
+				"Path": "C:\\VST_make\\Kiriki_yg_Liszt\\generator\\airwindows 500 lunchbox\\resource\\lunchboxeditor.uidesc"
+			},
+			"UIGridController": {
+				"Grids": "1x 1,5x 5,10x 10,12x 12,15x 15",
+				"Size": "1, 1"
+			},
+			"UITemplateController": {
+				"SelectedTemplate": "view"
+			},
+			"UIEditController": {
+				"EditViewScale": "1",
+				"EditorSize": "0, 0, 1353, 725",
+				"SplitViewSize_0_0": "0.8140200286123032702434443308447953313589",
+				"SplitViewSize_0_1": "0.1573676680972818375803257140432833693922",
+				"SplitViewSize_1_0": "0.4849785407725321628724657330167246982455",
+				"SplitViewSize_1_1": "0.5078683834048640655112194508546963334084",
+				"SplitViewSize_2_0": "0.5816703621581670313744893974217120558023",
+				"SplitViewSize_2_1": "0.4146341463414633943251885739300632849336",
+				"TabSwitchValue": "4",
+				"Version": "1"
+			},
+			"UIAttributesController": {},
+			"UIViewCreatorDataSource": {
+				"SelectedRow": "27"
+			},
+			"UIBitmapsDataSource": {
+				"SelectedRow": "11"
+			},
+			"UIGradientsDataSource": {
+				"SelectedRow": "-1"
+			},
+			"UIFontsDataSource": {
+				"SelectedRow": "-1"
+			},
+			"UITagsDataSource": {
+				"SelectedRow": "-1"
+			}
+		},
+		"templates": {
+			"view": {
+				"attributes": {
+					"background-color": "~ BlackCColor",
+					"background-color-draw-style": "filled and stroked",
+					"class": "CViewContainer",
+					"mouse-enabled": "true",
+					"opacity": "1",
+					"origin": "0, 0",
+					"size": "600, 525",
+					"transparent": "false",
+					"wants-focus": "false"
+				},
+				"children": {
+					"CView": {
+						"attributes": {
+							"bitmap": "background",
+							"class": "CView",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "0, 0",
+							"size": "600, 525",
+							"transparent": "false",
+							"wants-focus": "false"
+						}
+					},
+					"CAnimKnob": {
+						"attributes": {
+							"angle-range": "270",
+							"angle-start": "135",
+							"bitmap": "ssl_gray",
+							"class": "CAnimKnob",
+							"control-tag": "Input",
+							"default-value": "0.5",
+							"height-of-one-image": "75",
+							"inverse-bitmap": "false",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "7, 137",
+							"size": "75, 75",
+							"sub-pixmaps": "127",
+							"transparent": "false",
+							"value-inset": "0",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1",
+							"zoom-factor": "1.5"
+						}
+					},
+					"CAnimKnob": {
+						"attributes": {
+							"angle-range": "270",
+							"angle-start": "135",
+							"bitmap": "ssl_black",
+							"class": "CAnimKnob",
+							"control-tag": "Drive",
+							"default-value": "0.2",
+							"height-of-one-image": "75",
+							"inverse-bitmap": "false",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "7, 282",
+							"size": "75, 75",
+							"sub-pixmaps": "127",
+							"transparent": "false",
+							"value-inset": "0",
+							"wants-focus": "true",
+							"wheel-inc-value": "0.1",
+							"zoom-factor": "1.5"
+						}
+					},
+					"CAnimKnob": {
+						"attributes": {
+							"angle-range": "270",
+							"angle-start": "135",
+							"bitmap": "ssl_green",
+							"class": "CAnimKnob",
+							"control-tag": "Air",
+							"default-value": "0",
+							"height-of-one-image": "75",
+							"inverse-bitmap": "false",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "157, 49",
+							"size": "75, 75",
+							"sub-pixmaps": "127",
+							"transparent": "false",
+							"value-inset": "0",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1",
+							"zoom-factor": "1.5"
+						}
+					},
+					"CAnimKnob": {
+						"attributes": {
+							"angle-range": "270",
+							"angle-start": "135",
+							"bitmap": "ssl_gray",
+							"class": "CAnimKnob",
+							"control-tag": "High",
+							"default-value": "0.5",
+							"height-of-one-image": "75",
+							"inverse-bitmap": "false",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "217, 137",
+							"size": "75, 75",
+							"sub-pixmaps": "127",
+							"transparent": "false",
+							"value-inset": "0",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1",
+							"zoom-factor": "1.5"
+						}
+					},
+					"CAnimKnob": {
+						"attributes": {
+							"angle-range": "270",
+							"angle-start": "135",
+							"bitmap": "ssl_red",
+							"class": "CAnimKnob",
+							"control-tag": "Focus",
+							"default-value": "0.5",
+							"height-of-one-image": "75",
+							"inverse-bitmap": "false",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "157, 224",
+							"size": "75, 75",
+							"sub-pixmaps": "127",
+							"transparent": "false",
+							"value-inset": "0",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1",
+							"zoom-factor": "1.5"
+						}
+					},
+					"CAnimKnob": {
+						"attributes": {
+							"angle-range": "270",
+							"angle-start": "135",
+							"bitmap": "ssl_violet",
+							"class": "CAnimKnob",
+							"control-tag": "Body",
+							"default-value": "0.5",
+							"height-of-one-image": "75",
+							"inverse-bitmap": "false",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "217, 312",
+							"size": "75, 75",
+							"sub-pixmaps": "127",
+							"transparent": "false",
+							"value-inset": "0",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1",
+							"zoom-factor": "1.5"
+						}
+					},
+					"CAnimKnob": {
+						"attributes": {
+							"angle-range": "270",
+							"angle-start": "135",
+							"bitmap": "ssl_black",
+							"class": "CAnimKnob",
+							"control-tag": "Low",
+							"default-value": "0.5",
+							"height-of-one-image": "75",
+							"inverse-bitmap": "false",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "157, 399",
+							"size": "75, 75",
+							"sub-pixmaps": "127",
+							"transparent": "false",
+							"value-inset": "0",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1",
+							"zoom-factor": "1.5"
+						}
+					},
+					"CAnimKnob": {
+						"attributes": {
+							"angle-range": "270",
+							"angle-start": "135",
+							"bitmap": "ssl_violet",
+							"class": "CAnimKnob",
+							"control-tag": "Intensity",
+							"default-value": "0.5",
+							"height-of-one-image": "75",
+							"inverse-bitmap": "false",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "302, 92",
+							"size": "75, 75",
+							"sub-pixmaps": "127",
+							"transparent": "false",
+							"value-inset": "0",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1",
+							"zoom-factor": "1.5"
+						}
+					},
+					"CAnimKnob": {
+						"attributes": {
+							"angle-range": "270",
+							"angle-start": "135",
+							"bitmap": "ssl_blue",
+							"class": "CAnimKnob",
+							"control-tag": "Sharpness",
+							"default-value": "0.5",
+							"height-of-one-image": "75",
+							"inverse-bitmap": "false",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "372, 92",
+							"size": "75, 75",
+							"sub-pixmaps": "127",
+							"transparent": "false",
+							"value-inset": "0",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1",
+							"zoom-factor": "1.5"
+						}
+					},
+					"CAnimKnob": {
+						"attributes": {
+							"angle-range": "270",
+							"angle-start": "135",
+							"bitmap": "ssl_black",
+							"class": "CAnimKnob",
+							"control-tag": "Depth",
+							"default-value": "0.5",
+							"height-of-one-image": "75",
+							"inverse-bitmap": "false",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "302, 187",
+							"size": "75, 75",
+							"sub-pixmaps": "127",
+							"transparent": "false",
+							"value-inset": "0",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1",
+							"zoom-factor": "1.5"
+						}
+					},
+					"CAnimKnob": {
+						"attributes": {
+							"angle-range": "270",
+							"angle-start": "135",
+							"bitmap": "ssl_red",
+							"class": "CAnimKnob",
+							"control-tag": "Comp",
+							"default-value": "0.2",
+							"height-of-one-image": "75",
+							"inverse-bitmap": "false",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "302, 342",
+							"size": "75, 75",
+							"sub-pixmaps": "127",
+							"transparent": "false",
+							"value-inset": "0",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1",
+							"zoom-factor": "1.5"
+						}
+					},
+					"CAnimKnob": {
+						"attributes": {
+							"angle-range": "270",
+							"angle-start": "135",
+							"bitmap": "ssl_green",
+							"class": "CAnimKnob",
+							"control-tag": "Speed",
+							"default-value": "0.6",
+							"height-of-one-image": "75",
+							"inverse-bitmap": "false",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "372, 342",
+							"size": "75, 75",
+							"sub-pixmaps": "127",
+							"transparent": "false",
+							"value-inset": "0",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1",
+							"zoom-factor": "1.5"
+						}
+					},
+					"CAnimKnob": {
+						"attributes": {
+							"angle-range": "270",
+							"angle-start": "135",
+							"bitmap": "ssl_red",
+							"class": "CAnimKnob",
+							"control-tag": "Inflate",
+							"default-value": "0.2",
+							"height-of-one-image": "75",
+							"inverse-bitmap": "false",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "457, 137",
+							"size": "75, 75",
+							"sub-pixmaps": "127",
+							"transparent": "false",
+							"value-inset": "0",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1",
+							"zoom-factor": "1.5"
+						}
+					},
+					"CAnimKnob": {
+						"attributes": {
+							"angle-range": "270",
+							"angle-start": "135",
+							"bitmap": "ssl_gray",
+							"class": "CAnimKnob",
+							"control-tag": "Output",
+							"default-value": "0.5",
+							"height-of-one-image": "75",
+							"inverse-bitmap": "false",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "457, 282",
+							"size": "75, 75",
+							"sub-pixmaps": "127",
+							"transparent": "false",
+							"value-inset": "0",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1",
+							"zoom-factor": "1.5"
+						}
+					},
+					"CVuMeter": {
+						"attributes": {
+							"bitmap": "meter_v_on.png",
+							"class": "CVuMeter",
+							"control-tag": "InVuPPM",
+							"decrease-step-value": "0.1",
+							"default-value": "0",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "false",
+							"num-led": "100",
+							"off-bitmap": "meter_v_off.png",
+							"opacity": "1",
+							"orientation": "vertical",
+							"origin": "97, 46",
+							"size": "14, 435",
+							"transparent": "false",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1"
+						}
+					},
+					"CVuMeter": {
+						"attributes": {
+							"bitmap": "meter_v_on.png",
+							"class": "CVuMeter",
+							"control-tag": "OutVuPPM",
+							"decrease-step-value": "0.1",
+							"default-value": "0",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "false",
+							"num-led": "100",
+							"off-bitmap": "meter_v_off.png",
+							"opacity": "1",
+							"orientation": "vertical",
+							"origin": "547, 46",
+							"size": "14, 435",
+							"transparent": "false",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1"
+						}
+					},
+					"CVuMeter": {
+						"attributes": {
+							"bitmap": "meter_h_off.png",
+							"class": "CVuMeter",
+							"control-tag": "CompVuPPM",
+							"decrease-step-value": "0.1",
+							"default-value": "1",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "false",
+							"num-led": "100",
+							"off-bitmap": "meter_h_on.png",
+							"opacity": "1",
+							"orientation": "horizontal",
+							"origin": "315, 320",
+							"size": "120, 15",
+							"transparent": "false",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1"
+						}
+					},
+					"CVuMeter": {
+						"attributes": {
+							"bitmap": "meter_h_off.png",
+							"class": "CVuMeter",
+							"control-tag": "DeEssVuPPM",
+							"decrease-step-value": "0.1",
+							"default-value": "1",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "false",
+							"num-led": "100",
+							"off-bitmap": "meter_h_on.png",
+							"opacity": "1",
+							"orientation": "horizontal",
+							"origin": "316, 69",
+							"size": "120, 15",
+							"transparent": "false",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1"
+						}
+					},
+					"COnOffButton": {
+						"attributes": {
+							"bitmap": "rect_led",
+							"class": "COnOffButton",
+							"control-tag": "Lowcut",
+							"default-value": "0",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "25, 427",
+							"size": "40, 40",
+							"transparent": "false",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1"
+						}
+					},
+					"COnOffButton": {
+						"attributes": {
+							"bitmap": "rect_led",
+							"class": "COnOffButton",
+							"control-tag": "Listen",
+							"default-value": "0",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "390, 205",
+							"size": "40, 40",
+							"transparent": "false",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1"
+						}
+					},
+					"COnOffButton": {
+						"attributes": {
+							"bitmap": "rect_led",
+							"class": "COnOffButton",
+							"control-tag": "Attack",
+							"default-value": "0",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "355, 430",
+							"size": "40, 40",
+							"transparent": "false",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1"
+						}
+					},
+					"COnOffButton": {
+						"attributes": {
+							"bitmap": "rect_led",
+							"class": "COnOffButton",
+							"control-tag": "Safe",
+							"default-value": "0",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "475, 430",
+							"size": "40, 40",
+							"transparent": "false",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1"
+						}
+					},
+					"COnOffButton": {
+						"attributes": {
+							"bitmap": "rect_led",
+							"class": "COnOffButton",
+							"control-tag": "Bypass",
+							"default-value": "0",
+							"max-value": "1",
+							"min-value": "0",
+							"mouse-enabled": "true",
+							"opacity": "1",
+							"origin": "25, 53",
+							"size": "40, 40",
+							"transparent": "false",
+							"wants-focus": "false",
+							"wheel-inc-value": "0.1"
+						}
+					}
+				}
+			}
+		}
+	}
+}
