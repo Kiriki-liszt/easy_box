@@ -3,7 +3,7 @@
 500-style channel strip for vocal-podcasting.  
 
 1. airwindows channel9 - fixed to neve.  
-2. Lowcut filter <- might not be used, and not implemented yet.  
+2. Lowcut filter.  
 3. maag-liftikus eq, but I made it auto adjusted to sample rate and added a 1.2 kHz peak filter for mid-focus control.  
 4. airwindows DeBess, fixed filter.  
 5. MeowMu compressor. Variation of airwindows VariMu comp.  
@@ -23,3 +23,4 @@ VSTSDK 3.7.7 used
 VSTGUI 4.12 used  
 
 v0.0.1 : initial.  
+v0.1.0 : gui update & loucut enabled.  

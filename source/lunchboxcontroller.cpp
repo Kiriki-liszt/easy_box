@@ -149,7 +149,7 @@ namespace yg331 {
 
 		tag = kParamLowcut;
 		stepCount = 1;
-		defaultVal = 0;
+		defaultVal = 1;
 		flags = Vst::ParameterInfo::kCanAutomate;
 		parameters.addParameter(STR16("Lowcut"), nullptr, stepCount, defaultVal, flags, tag);
 		tag = kParamListen;

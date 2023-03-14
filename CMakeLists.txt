@@ -5,7 +5,7 @@ set(vst3sdk_SOURCE_DIR "C:/VST_make/VST_SDK/vst3sdk")
 if(NOT vst3sdk_SOURCE_DIR)
     message(FATAL_ERROR "Path to VST3 SDK is empty!")
 endif()
-
+  
 project(airwindows_500_lunchbox
     # This is your plug-in version number. Change it here only.
     # Version number symbols usable in C++ can be found in

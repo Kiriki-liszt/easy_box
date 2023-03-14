@@ -266,7 +266,7 @@ namespace yg331 {
 		overallscale *= getSampleRate;
 		double localiirAmount = iirAmount / overallscale;
 		double localthreshold = threshold; //we've learned not to try and adjust threshold for sample rate
-		double density = fParamDrive * 2.0; //0-2
+		double density = fParamDrive; //0-2, originally at "* 2.0"
 		double phattity = density - 1.0;
 		if (density > 1.0) density = 1.0; //max out at full wet for Spiral aspect
 		if (phattity < 0.0) phattity = 0.0; //
@@ -441,8 +441,14 @@ namespace yg331 {
 		p_1k2[1] = z_1k2[1];
 		p_1k2[2] = (1 - QK + K_1k2_2) * norm_1k2;
 
-		x[0] = 0.5; // 10hz
-		x[1] = 0.5; // 40hz
+		if (bParamLowcut) {
+			x[0] = 0.0; // 10hz
+			x[1] = 0.0; // 40hz
+		}
+		else {
+			x[0] = 0.5; // 10hz
+			x[1] = 0.5; // 40hz
+		}
 		x[2] = fParamLow;
 		x[3] = fParamBody;
 		x[4] = fParamHigh;
@@ -609,8 +615,8 @@ namespace yg331 {
 		Vst::Sample64 sharpness = fParamSharpness * 40.0;
 		if (sharpness < 2) sharpness = 2;
 		Vst::Sample64 speed = 0.1 / sharpness;
-		Vst::Sample64 depth = 1.0 / (fParamDepth + 0.0001);
-		Vst::Sample64 iirAmount = 0.5; //Filter
+		Vst::Sample64 depth = 1.0 / ((1.0 - fParamDepth) + 0.0001);
+		Vst::Sample64 iirAmount = 0.5; //Filter 
 		bool monitoring = bParamListen;
 
 		while (--sampleFrames >= 0)
@@ -748,7 +754,8 @@ namespace yg331 {
 				{
 					muVaryL = threshold / fabs(squaredSampleL);
 					muAttackL = sqrt(fabs(muSpeedAL));
-					muAttackL *= 5.0;
+					if (bParamAttack) muAttackL *= 2.0;
+					else muAttackL *= 5.0;
 					muCoefficientAL = muCoefficientAL * (muAttackL - 1.0);
 					if (muVaryL < threshold)
 					{
@@ -776,7 +783,8 @@ namespace yg331 {
 				{
 					muVaryL = threshold / fabs(squaredSampleL);
 					muAttackL = sqrt(fabs(muSpeedBL));
-					muAttackL *= 5.0;
+					if (bParamAttack) muAttackL *= 2.0;
+					else muAttackL *= 5.0;
 					muCoefficientBL = muCoefficientBL * (muAttackL - 1);
 					if (muVaryL < threshold)
 					{
@@ -807,7 +815,8 @@ namespace yg331 {
 				{
 					muVaryR = threshold / fabs(squaredSampleR);
 					muAttackR = sqrt(fabs(muSpeedAR));
-					muAttackR *= 5.0;
+					if (bParamAttack) muAttackR *= 2.0;
+					else muAttackR *= 5.0;
 					muCoefficientAR = muCoefficientAR * (muAttackR - 1.0);
 					if (muVaryR < threshold)
 					{
@@ -835,7 +844,8 @@ namespace yg331 {
 				{
 					muVaryR = threshold / fabs(squaredSampleR);
 					muAttackR = sqrt(fabs(muSpeedBR));
-					muAttackR *= 5.0;
+					if (bParamAttack) muAttackR *= 2.0;
+					else muAttackR *= 5.0;
 					muCoefficientBR = muCoefficientBR * (muAttackR - 1);
 					if (muVaryR < threshold)
 					{
@@ -882,6 +892,8 @@ namespace yg331 {
 
 			if (tmp > (inputSampleL / drySampleL)) tmp = (inputSampleL / drySampleL);
 			if (tmp > (inputSampleR / drySampleR)) tmp = (inputSampleR / drySampleR);
+			if (inputSampleL == drySampleL) tmp = 1.0;
+			if (inputSampleR == drySampleR) tmp = 1.0;
 
 			*in1 = inputSampleL;
 			*in2 = inputSampleR;

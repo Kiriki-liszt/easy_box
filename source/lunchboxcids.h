@@ -48,7 +48,11 @@ namespace yg331 {
 		kParamCompVuPPM
 	};
 
-	const bool BypassInit = false, LowcutInit = false, ListenInit = false, AttackInit = false, SafeInit = false;
+	const bool BypassInit = false, 
+		LowcutInit = true, 
+		ListenInit = false, 
+		AttackInit = false, 
+		SafeInit = false;
 
 	const double InputInit = 0.5,
 		OutputInit = 0.5,
@@ -57,7 +61,7 @@ namespace yg331 {
 
 		AirInit = 0.0,
 		HighInit = 0.5,
-		FocusInit = 0.5,
+		FocusInit = 0.5, 
 		BodyInit = 0.5,
 		LowInit = 0.5,
 		IntensityInit = 0.5,
